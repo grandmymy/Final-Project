@@ -18,28 +18,32 @@
     <div class="container1">
       <div class="column">
         <h1>Weather Forecast</h1>
-        <h3 id="date"></h3>
+        <h3> Last updated at <span id="date"></span></h3>
       </div>
-      <div  class="column"  >
-          <input id="city-input" type="search" placeholder="Search City Here    🔎" />
+      <div class="col-9">
+      <!-- <form id="search-form" class="column"> -->
+          <input   class="my-form" id="city-input" type="search" placeholder="Search City Here    🔎"  onkeypress="changeCity(document.querySelector('#city-input').value)"/>
+          <input type="submit" value="Search" class="btn btn-primary" onclick="changeCity(document.querySelector('#city-input').value)"/> 
+      <!-- </form> -->  
       </div>
-    </div>
-    </div>
+      
     <div class="container2">
       <div class="columnTown">
         <h3 id="city"></h3>
         <h4></h4>
 
-         <strong id="temperature"></strong>
-                <span class="units">°C | <a href="#"> °F </a></span>
+         <span class="units" id="temperature"></span>°C
+                
       </div>
       <div class="columnTown">
-          <h1>🌞</h1>
+          <img src=""
+          id="icon"/>
       </div>
-      <div id="description" class="columnTown">
-        Sunny
+      <div id="description" class="uppercaseText">
+      </div>
+      <div>
         <br />Humidity: <span id="humidity"></span>% <br />
-        Wind: <span id="wind"></span> km/h
+        <br /> Wind: <span id="wind"></span> km/h <br />
       </div>
     </div>
 
